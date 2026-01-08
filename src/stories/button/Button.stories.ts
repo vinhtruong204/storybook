@@ -5,7 +5,9 @@ import { colors, defaultTextStyle } from '../../utils/helpers/styles';
 import { centerView } from '../../utils/helpers/resize';
 import { argTypes, getDefaultArgs } from '../utils/argTypes';
 import { Button } from '@pixi/ui';
-import { action } from '@storybook/addon-actions';
+import { fn } from '@storybook/test';
+
+const action = (name: string) => fn().mockName(name);
 
 const args = {
     text: 'Click me',
